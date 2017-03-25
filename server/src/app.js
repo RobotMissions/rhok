@@ -25,24 +25,22 @@ app.use(compress())
   .use('/', serveStatic( app.get('public') ))
   .use('/', serveStatic('dist'));
 
-let modules = [
-  '@angular',
-  'rxjs',
-  'angular-in-memory-web-api',
-  'core-js/client',
-  'zone.js/dist',
-  'systemjs/dist'
-];
-
-for (let module of modules) {
-  app.use(`/node_modules/${module}`, serveStatic(`node_modules/${module}`));
-}
+app.use('/node_modules', serveStatic('node_modules'));
 
 app.use(bodyParser.json())
   .use(bodyParser.urlencoded({ extended: true }))
   .configure(hooks())
   .configure(rest())
-  .configure(socketio())
+  .configure(socketio(function(io) {
+    io.on('connection', function(socket) {
+      console.log('NEW CONNECTION', socket.id);
+      socket.emit('init', 'Welcome, Robo');
+      socket.on('foo', function (data) {
+        console.log('Got data: ', data);
+        socket.emit('bar', 'bar');
+      });
+    });
+  }))
   .configure(services)
   .configure(middleware);
 
