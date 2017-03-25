@@ -6,21 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var feathers_service_1 = require("./feathers.service");
-var AppModule = (function () {
-    function AppModule() {
+exports.DATA = [
+    { key: 1, val: 'A' },
+    { key: 2, val: 'B' },
+];
+var AppService = (function () {
+    function AppService() {
     }
-    return AppModule;
+    AppService.prototype.getData = function () {
+        return exports.DATA;
+    };
+    return AppService;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent],
-        providers: [feathers_service_1.SocketService, feathers_service_1.RestService],
-        bootstrap: [app_component_1.AppComponent]
-    })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+AppService = __decorate([
+    core_1.Injectable()
+], AppService);
+exports.AppService = AppService;
+//# sourceMappingURL=app.service.js.map
