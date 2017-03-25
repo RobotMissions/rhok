@@ -23,7 +23,22 @@ app.use(compress())
   .use(cors())
   .use(favicon( path.join(app.get('public'), 'favicon.ico') ))
   .use('/', serveStatic( app.get('public') ))
-  .use(bodyParser.json())
+  .use('/', serveStatic('dist'));
+
+let modules = [
+  '@angular',
+  'rxjs',
+  'angular-in-memory-web-api',
+  'core-js/client',
+  'zone.js/dist',
+  'systemjs/dist'
+];
+
+for (let module of modules) {
+  app.use(`/node_modules/${module}`, serveStatic(`node_modules/${module}`));
+}
+
+app.use(bodyParser.json())
   .use(bodyParser.urlencoded({ extended: true }))
   .configure(hooks())
   .configure(rest())
