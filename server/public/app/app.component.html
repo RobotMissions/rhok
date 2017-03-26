@@ -15,9 +15,7 @@
                                 <div class="card-block" style="padding: 0px;">
                                     <div class="row">
                                         <div class="col-sm-12  col-lg-12">
-                                            <h5 class="card-title mb-0" style="position: absolute; padding: 15px 20px;text-shadow: 0px 4px 3px rgba(0,0,0,0.8),
-             0px 8px 13px rgba(0,0,0,0.2),
-             0px 18px 23px rgba(0,0,0,0.2);">
+                                            <h5 class="card-title mb-0 dropShadow" style="position: absolute; padding: 15px 20px;">
                                                 <i class="fa fa-video-camera"></i> Live View
                                             </h5>
                                             <canvas id="videoCanvas">
@@ -33,26 +31,31 @@
                                                 // Setup the WebSocket connection and start the player
                                                 var client = new WebSocket( 'ws://127.0.0.1:8084/' );
 
-                                                var canvas = document.getElementById('videoCanvas');
+                                                var canvas = document.glementById('videoCanvas');
                                                 var player = new jsmpeg(client, {canvas:canvas});
                                             </script>
                                             <!-- <div class="small text-muted">November 2015</div> -->
                                         </div>
                                         <!--/.col-->
-                                        <div class="col-sm-7 hidden-sm-up">
-                                            <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                                                <div class="btn-group mr-1" data-toggle="buttons" aria-label="First group">
-                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-up"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-down"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-left"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-right"></i>
-                                                    </button>
-                                                </div>
+
+                                        <!-- Floating buttons -->
+                                        <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+                                            <div class="btn-group mr-1" data-toggle="buttons" aria-label="First group" style="position: absolute; right:0px; top:15px;">
+                                                <button type="button" class="btn btn-outline-secondary float-right"><i class="fa fa-arrow-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary float-right"><i class="fa fa-arrow-down"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary float-right"><i class="fa fa-arrow-left"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary float-right"><i class="fa fa-arrow-right"></i>
+                                                </button>
                                             </div>
                                         </div>
+
+                                        <!-- GoPro Status -->
+                                        <p class="card-title mb-0 dropShadow" style="position: absolute; padding: 15px 20px; bottom: 0px; right: 0px;">
+                                                <i class="fa fa-battery-full"></i> 90%
+                                            </p>
                                         <!--/.col-->
                                     </div>
                                     <!--/.row-->
@@ -98,7 +101,7 @@
                                     <div class="card card-inverse card-primary">
                                         <div class="card-block pb-0">
                                             <h4 class="mb-0">9.823</h4>
-                                            <p>Action 4</p>
+                                            <p>Action 3</p>
                                         </div>
                                         <div class="chart-wrapper px-1" style="height:70px;">
                                             <canvas id="card-chart1" class="chart" height="70"></canvas>
@@ -115,7 +118,7 @@
                                     <div class="card card-inverse card-primary">
                                         <div class="card-block pb-0">
                                             <h4 class="mb-0">9.823</h4>
-                                            <p>Action 3</p>
+                                            <p>Action 4</p>
                                         </div>
                                         <div class="chart-wrapper px-1" style="height:70px;">
                                             <canvas id="card-chart1" class="chart" height="70"></canvas>
@@ -128,7 +131,7 @@
                                     <div class="card card-inverse card-primary">
                                         <div class="card-block pb-0">
                                             <h4 class="mb-0">9.823</h4>
-                                            <p>Action 4</p>
+                                            <p>Action 5</p>
                                         </div>
                                         <div class="chart-wrapper px-1" style="height:70px;">
                                             <canvas id="card-chart1" class="chart" height="70"></canvas>
@@ -142,7 +145,7 @@
                                     <div class="card card-inverse card-primary">
                                         <div class="card-block pb-0">
                                             <h4 class="mb-0">9.823</h4>
-                                            <p>Action 4</p>
+                                            <p>Action 6</p>
                                         </div>
                                         <div class="chart-wrapper px-1" style="height:70px;">
                                             <canvas id="card-chart1" class="chart" height="70"></canvas>
@@ -160,7 +163,7 @@
                             <div class="card card-inverse card-secondary">
                                 <div class="card-block pb-0">
                                     <h4 class="mb-0">9.823</h4>
-                                    <p>Action 1</p>
+                                    <p>Sensor 1</p>
                                 </div>
                                 <div class="chart-wrapper px-1" style="height:70px;">
                                     <canvas id="card-chart1" class="chart" height="70"></canvas>
@@ -173,7 +176,7 @@
                             <div class="card card-inverse card-secondary">
                                 <div class="card-block pb-0">
                                     <h4 class="mb-0">9.823</h4>
-                                    <p>Action 2</p>
+                                    <p>Sensor 2</p>
                                 </div>
                                 <div class="chart-wrapper px-1" style="height:70px;">
                                     <canvas id="card-chart1" class="chart" height="70"></canvas>
@@ -187,7 +190,7 @@
                             <div class="card card-inverse card-secondary">
                                 <div class="card-block pb-0">
                                     <h4 class="mb-0">9.823</h4>
-                                    <p>Action 4</p>
+                                    <p>Sensor 3</p>
                                 </div>
                                 <div class="chart-wrapper px-1" style="height:70px;">
                                     <canvas id="card-chart1" class="chart" height="70"></canvas>
@@ -202,7 +205,7 @@
                             <div class="card card-inverse card-secondary">
                                 <div class="card-block pb-0">
                                     <h4 class="mb-0">9.823</h4>
-                                    <p>Action 4</p>
+                                    <p>Sensor 4</p>
                                 </div>
                                 <div class="chart-wrapper px-1" style="height:70px;">
                                     <canvas id="card-chart1" class="chart" height="70"></canvas>

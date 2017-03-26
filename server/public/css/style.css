@@ -27,6 +27,15 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
+#videoCanvas {
+        margin: 0;
+        width: 100%; }
+
+.dropShadow {
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.8),
+              0px 8px 13px rgba(0,0,0,0.2),
+             0px 18px 23px rgba(0,0,0,0.2); }
+
 figcaption,
 figure,
 main {
