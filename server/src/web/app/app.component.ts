@@ -3,12 +3,7 @@ import {CommandService} from './command.service'
 
 @Component({
   selector: 'rmmc-app',
-  template: `
-    <h1>Hello {{name}}</h1>
-    <pre>
-      {{data}}
-    </pre>
-  `,
+  templateUrl: 'app/app.component.html',
   providers: [CommandService]
 })
 export class AppComponent  {
