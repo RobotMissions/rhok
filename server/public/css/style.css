@@ -40,7 +40,9 @@ figcaption,
 figure,
 main {
   display: block;
-  background-image: url("../img/bg-blur.jpg"); }
+  background-image: url("../img/bg-blur.jpg");
+  background-size: 100%;
+  background-repeat: repeat-y; }
 
 figure {
   margin: 1em 40px; }
