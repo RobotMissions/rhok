@@ -1,5 +1,7 @@
 var io = require('socket.io-client');
-var serverUrl = 'http://10.200.1.28:3030/';
+var config = require('./config.json');
+
+var serverUrl = config.relay_server;//http://10.200.1.28:3030/
 var conn = io.connect(serverUrl);
 
 conn.on('init', function(data) {
