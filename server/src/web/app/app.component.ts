@@ -12,6 +12,9 @@ export class AppComponent  {
   constructor(private commandService: CommandService) {
     this.commandService.getAll().then(data => {
       this.data = data && JSON.stringify(data);
+      setTimeout(() =>
+        new window.jsmpeg(new WebSocket('ws://localhost:8084'), {canvas: document.getElementById('videoCanvas')}),
+        0);
     });
   }
 }
