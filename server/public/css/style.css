@@ -2896,7 +2896,7 @@ header.navbar {
   margin-left: -0.625rem; }
 
 .card-primary {
-  background-color: #167495;
+  background-color: #0e81aa;
   border-color: #2f2622; }
   .card-primary .card-header,
   .card-primary .card-footer {
@@ -3105,11 +3105,11 @@ header.navbar {
       margin-bottom: 0; }
 
 .card-primary {
-  background-color: #167495; }
+  background-color: #0e81aa; }
   .card-primary .card-header {
     border-color: #2F2622; }
   .card-primary .card-header, .card-primary .card-footer {
-    background-color: #167495; }
+    background-color: #0e81aa; }
 
 .card-secondary {
   background-color: #20282c; }
@@ -4178,7 +4178,7 @@ button.close {
 
 .bg-primary {
   color: #fff !important;
-  background-color: #167495 !important; }
+  background-color: #0e81aa !important; }
 
 a.bg-primary:focus, a.bg-primary:hover {
   background-color: #1985ac; }
