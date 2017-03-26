@@ -24,7 +24,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'rmmc-app',
-        template: "\n    <h1>Hello {{name}}</h1>\n    <pre>\n      {{data}}\n    </pre>\n  ",
+        templateUrl: 'app/app.component.html',
         providers: [command_service_1.CommandService]
     }),
     __metadata("design:paramtypes", [command_service_1.CommandService])

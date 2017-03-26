@@ -1,0 +1,223 @@
+<body class="app header-fixed sidebar-hidden aside-menu-fixed aside-menu-hidden">
+    <header class="app-header navbar">
+        <a class="navbar-brand" href="#"></a>
+    </header>
+
+    <div class="app-body">
+        
+        <!-- Main content -->
+        <main class="main">
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-7">
+                            <div class="card">
+                                <div class="card-block" style="padding: 0px;">
+                                    <div class="row">
+                                        <div class="col-sm-12  col-lg-12">
+                                            <h5 class="card-title mb-0" style="position: absolute; padding: 15px 20px;text-shadow: 0px 4px 3px rgba(0,0,0,0.8),
+             0px 8px 13px rgba(0,0,0,0.2),
+             0px 18px 23px rgba(0,0,0,0.2);">
+                                                <i class="fa fa-video-camera"></i> Live View
+                                            </h5>
+                                            <canvas id="videoCanvas">
+                                                <p>
+                                                    Please use a browser that supports the Canvas Element, like
+                                                    <a href="http://www.google.com/chrome">Chrome</a>,
+                                                    <a href="http://www.mozilla.com/firefox/">Firefox</a>,
+                                                    <a href="http://www.apple.com/safari/">Safari</a> or Internet Explorer 10
+                                                </p>
+                                            </canvas>
+                                            <script type="text/javascript" src="jsmpg.js"></script>
+                                            <script type="text/javascript">
+                                                // Setup the WebSocket connection and start the player
+                                                var client = new WebSocket( 'ws://127.0.0.1:8084/' );
+
+                                                var canvas = document.getElementById('videoCanvas');
+                                                var player = new jsmpeg(client, {canvas:canvas});
+                                            </script>
+                                            <!-- <div class="small text-muted">November 2015</div> -->
+                                        </div>
+                                        <!--/.col-->
+                                        <div class="col-sm-7 hidden-sm-up">
+                                            <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+                                                <div class="btn-group mr-1" data-toggle="buttons" aria-label="First group">
+                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-up"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-down"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-left"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-right"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/.col-->
+                                    </div>
+                                    <!--/.row-->
+                                </div>
+                                <!--
+                                <div class="card-footer">
+                                </div>
+                                -->
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5 col-lg-5">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4">
+                                    <!-- First card -->
+                                    <div class="card card-inverse card-primary">
+                                        <div class="card-block pb-0">
+                                            <h4 class="mb-0">9.823</h4>
+                                            <p>Action 1</p>
+                                        </div>
+                                        <div class="chart-wrapper px-1" style="height:70px;">
+                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 col-lg-4">
+                                    <!-- Second card -->
+                                    <div class="card card-inverse card-primary">
+                                        <div class="card-block pb-0">
+                                            <h4 class="mb-0">9.823</h4>
+                                            <p>Action 2</p>
+                                        </div>
+                                        <div class="chart-wrapper px-1" style="height:70px;">
+                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 col-lg-4">
+
+                                    <!-- Fourth card -->
+                                    <div class="card card-inverse card-primary">
+                                        <div class="card-block pb-0">
+                                            <h4 class="mb-0">9.823</h4>
+                                            <p>Action 4</p>
+                                        </div>
+                                        <div class="chart-wrapper px-1" style="height:70px;">
+                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    
+                        
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4">
+                                    <!-- Third card -->
+                                    <div class="card card-inverse card-primary">
+                                        <div class="card-block pb-0">
+                                            <h4 class="mb-0">9.823</h4>
+                                            <p>Action 3</p>
+                                        </div>
+                                        <div class="chart-wrapper px-1" style="height:70px;">
+                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-lg-4">
+
+                                    <!-- Fourth card -->
+                                    <div class="card card-inverse card-primary">
+                                        <div class="card-block pb-0">
+                                            <h4 class="mb-0">9.823</h4>
+                                            <p>Action 4</p>
+                                        </div>
+                                        <div class="chart-wrapper px-1" style="height:70px;">
+                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 col-lg-4">
+
+                                    <!-- Fourth card -->
+                                    <div class="card card-inverse card-primary">
+                                        <div class="card-block pb-0">
+                                            <h4 class="mb-0">9.823</h4>
+                                            <p>Action 4</p>
+                                        </div>
+                                        <div class="chart-wrapper px-1" style="height:70px;">
+                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts -->
+                    <div class="row">
+                        <div class="col-sm-3 col-lg-3">
+                            <!-- First card -->
+                            <div class="card card-inverse card-secondary">
+                                <div class="card-block pb-0">
+                                    <h4 class="mb-0">9.823</h4>
+                                    <p>Action 1</p>
+                                </div>
+                                <div class="chart-wrapper px-1" style="height:70px;">
+                                    <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 col-lg-3">
+                            <!-- Second card -->
+                            <div class="card card-inverse card-secondary">
+                                <div class="card-block pb-0">
+                                    <h4 class="mb-0">9.823</h4>
+                                    <p>Action 2</p>
+                                </div>
+                                <div class="chart-wrapper px-1" style="height:70px;">
+                                    <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 col-lg-3">
+
+                            <!-- Fourth card -->
+                            <div class="card card-inverse card-secondary">
+                                <div class="card-block pb-0">
+                                    <h4 class="mb-0">9.823</h4>
+                                    <p>Action 4</p>
+                                </div>
+                                <div class="chart-wrapper px-1" style="height:70px;">
+                                    <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-3 col-lg-3">
+
+                            <!-- Fourth card -->
+                            <div class="card card-inverse card-secondary">
+                                <div class="card-block pb-0">
+                                    <h4 class="mb-0">9.823</h4>
+                                    <p>Action 4</p>
+                                </div>
+                                <div class="chart-wrapper px-1" style="height:70px;">
+                                    <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+
+
+    </div>
+
+</body>
