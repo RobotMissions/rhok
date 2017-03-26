@@ -8,10 +8,6 @@ conn.on('init', function(data) {
     console.log("Connected?")
     console.log("Server says " + data);
     conn.emit('foo', { user: 'me', msg: 'hello from robot' });
-
-    get();
-    find();
-    create();
 });
 
 conn.on('pong', function(data) {
@@ -29,8 +25,8 @@ function get() {
     });
 }
 
-function create() {
-    var p1 = 'create';
+function create(p1) {
+    //var p1 = 'create';
     conn.emit('create', p1, function(resp, data) {
         console.log('server sent resp code ' + resp);
     });

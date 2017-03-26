@@ -44,6 +44,7 @@ serialport.on('open', function(){
         delim
       }
       console.log(obj);
+      socketsend.create(obj);
     }
 
   });
