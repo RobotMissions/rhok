@@ -27,7 +27,8 @@ function get() {
 
 function create(p1) {
     //var p1 = 'create';
-    conn.emit('create', p1, function(resp, data) {
+    console.log('sending create');
+    conn.emit('commands::create', p1, function(resp, data) {
         console.log('server sent resp code ' + resp);
     });
  }
