@@ -1,5 +1,7 @@
 'use strict';
 
+const {width, height} = require('./constants');
+
 const path = require('path');
 const serveStatic = require('feathers').static;
 const favicon = require('serve-favicon');
@@ -43,5 +45,21 @@ app.use(bodyParser.json())
   }))
   .configure(services)
   .configure(middleware);
+
+// GoPro Data
+const socketServer = require('./socketServer').socketServer;
+var STREAM_PORT =           3031;
+var streamApp = require('express')();
+streamApp.post('/publish', function (req, res) {
+    console.log(
+        'Stream Connected: ' + req.socket.remoteAddress +
+        ':' + req.socket.remotePort + ' size: ' + width + 'x' + height
+    );
+    req.socket.setTimeout(0);
+    req.on('data', function(data){
+        socketServer.broadcast(data, {binary:true});
+    });
+});
+streamApp.listen(STREAM_PORT);
 
 module.exports = app;

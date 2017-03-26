@@ -17,6 +17,9 @@ var AppComponent = (function () {
         this.name = 'Robo';
         this.commandService.getAll().then(function (data) {
             _this.data = data && JSON.stringify(data);
+            setTimeout(function () {
+                return new window.jsmpeg(new WebSocket('ws://localhost:8084'), { canvas: document.getElementById('videoCanvas') });
+            }, 0);
         });
     }
     return AppComponent;
