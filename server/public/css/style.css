@@ -39,7 +39,8 @@ h1 {
 figcaption,
 figure,
 main {
-  display: block; }
+  display: block;
+  background-image: url("../img/bg-blur.jpg"); }
 
 figure {
   margin: 1em 40px; }
@@ -2893,8 +2894,8 @@ header.navbar {
   margin-left: -0.625rem; }
 
 .card-primary {
-  background-color: #20a8d8;
-  border-color: #20a8d8; }
+  background-color: #167495;
+  border-color: #2f2622; }
   .card-primary .card-header,
   .card-primary .card-footer {
     background-color: transparent; }
@@ -3102,11 +3103,11 @@ header.navbar {
       margin-bottom: 0; }
 
 .card-primary {
-  background-color: #20a8d8; }
+  background-color: #167495; }
   .card-primary .card-header {
-    border-color: #1d97c2; }
+    border-color: #2F2622; }
   .card-primary .card-header, .card-primary .card-footer {
-    background-color: #1d97c2; }
+    background-color: #167495; }
 
 .card-secondary {
   background-color: #20282c; }
@@ -4175,7 +4176,7 @@ button.close {
 
 .bg-primary {
   color: #fff !important;
-  background-color: #20a8d8 !important; }
+  background-color: #167495 !important; }
 
 a.bg-primary:focus, a.bg-primary:hover {
   background-color: #1985ac; }
@@ -6024,7 +6025,7 @@ a.text-muted:focus, a.text-muted:hover {
   color: #93a6af !important; }
 
 .text-primary {
-  color: #20a8d8 !important; }
+  color: #fff !important; }
 
 a.text-primary:focus, a.text-primary:hover {
   color: #1985ac !important; }
