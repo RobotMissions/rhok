@@ -27,10 +27,22 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
+#videoCanvas {
+        margin: 0;
+        width: 100%; }
+
+.dropShadow {
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.8),
+              0px 8px 13px rgba(0,0,0,0.2),
+             0px 18px 23px rgba(0,0,0,0.2); }
+
 figcaption,
 figure,
 main {
-  display: block; }
+  display: block;
+  background-image: url("../img/bg-blur.jpg");
+  background-size: 100%;
+  background-repeat: repeat-y; }
 
 figure {
   margin: 1em 40px; }
@@ -2884,8 +2896,8 @@ header.navbar {
   margin-left: -0.625rem; }
 
 .card-primary {
-  background-color: #20a8d8;
-  border-color: #20a8d8; }
+  background-color: #0e81aa;
+  border-color: #2f2622; }
   .card-primary .card-header,
   .card-primary .card-footer {
     background-color: transparent; }
@@ -3093,11 +3105,11 @@ header.navbar {
       margin-bottom: 0; }
 
 .card-primary {
-  background-color: #20a8d8; }
+  background-color: #0e81aa; }
   .card-primary .card-header {
-    border-color: #1d97c2; }
+    border-color: #2F2622; }
   .card-primary .card-header, .card-primary .card-footer {
-    background-color: #1d97c2; }
+    background-color: #0e81aa; }
 
 .card-secondary {
   background-color: #20282c; }
@@ -4166,7 +4178,7 @@ button.close {
 
 .bg-primary {
   color: #fff !important;
-  background-color: #20a8d8 !important; }
+  background-color: #0e81aa !important; }
 
 a.bg-primary:focus, a.bg-primary:hover {
   background-color: #1985ac; }
@@ -6015,7 +6027,7 @@ a.text-muted:focus, a.text-muted:hover {
   color: #93a6af !important; }
 
 .text-primary {
-  color: #20a8d8 !important; }
+  color: #fff !important; }
 
 a.text-primary:focus, a.text-primary:hover {
   color: #1985ac !important; }
@@ -6220,6 +6232,23 @@ body {
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn; }
+
+
+  @-webkit-keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut; }
 
 .row.row-equal {
   padding-right: 7.5px;

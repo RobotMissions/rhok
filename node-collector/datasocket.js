@@ -1,15 +1,13 @@
 var io = require('socket.io-client');
-var serverUrl = 'http://10.200.1.28:3030/';
+var config = require('./config.json');
+
+var serverUrl = config.relay_server;//http://10.200.1.28:3030/
 var conn = io.connect(serverUrl);
 
 conn.on('init', function(data) {
     console.log("Connected?")
     console.log("Server says " + data);
     conn.emit('foo', { user: 'me', msg: 'hello from robot' });
-
-    get();
-    find();
-    create();
 });
 
 conn.on('pong', function(data) {
@@ -27,9 +25,10 @@ function get() {
     });
 }
 
-function create() {
-    var p1 = 'create';
-    conn.emit('create', p1, function(resp, data) {
+function create(p1) {
+    //var p1 = 'create';
+    console.log('sending create');
+    conn.emit('commands::create', p1, function(resp, data) {
         console.log('server sent resp code ' + resp);
     });
  }

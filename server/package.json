@@ -37,6 +37,7 @@
     "core-js": "^2.4.1",
     "cors": "^2.8.1",
     "express": "^4.13.4",
+    "debug": "2.2.0",
     "feathers": "^2.1.1",
     "feathers-authentication": "^0.7.12",
     "feathers-configuration": "^0.3.3",

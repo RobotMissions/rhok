@@ -10,14 +10,12 @@
             <div class="container-fluid">
                 <div class="animated fadeIn">
                     <div class="row">
-                        <div class="col-sm-6 col-lg-7">
+                        <div class="col-sm-12 col-lg-7">
                             <div class="card">
                                 <div class="card-block" style="padding: 0px;">
                                     <div class="row">
                                         <div class="col-sm-12  col-lg-12">
-                                            <h5 class="card-title mb-0" style="position: absolute; padding: 15px 20px;text-shadow: 0px 4px 3px rgba(0,0,0,0.8),
-             0px 8px 13px rgba(0,0,0,0.2),
-             0px 18px 23px rgba(0,0,0,0.2);">
+                                            <h5 class="card-title mb-0 dropShadow" style="position: absolute; padding: 15px 20px;">
                                                 <i class="fa fa-video-camera"></i> Live View
                                             </h5>
                                             <canvas id="videoCanvas">
@@ -30,20 +28,25 @@
                                             </canvas>
                                         </div>
                                         <!--/.col-->
-                                        <div class="col-sm-7 hidden-sm-up">
-                                            <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                                                <div class="btn-group mr-1" data-toggle="buttons" aria-label="First group">
-                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-up"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-down"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-left"></i>
-                                                    </button>
-                                                    <button type="button" class="btn btn-outline-secondary float-right"><i class="icon-arrow-right"></i>
-                                                    </button>
-                                                </div>
+
+                                        <!-- Floating buttons -->
+                                        <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+                                            <div class="btn-group mr-1" data-toggle="buttons" aria-label="First group" style="position: absolute; right:0px; top:15px;">
+                                                <button type="button" class="btn btn-outline-secondary float-right"><i class="fa fa-arrow-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary float-right"><i class="fa fa-arrow-down"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary float-right"><i class="fa fa-arrow-left"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary float-right"><i class="fa fa-arrow-right"></i>
+                                                </button>
                                             </div>
                                         </div>
+
+                                        <!-- GoPro Status -->
+                                        <p class="card-title mb-0 dropShadow" style="position: absolute; padding: 15px 20px; bottom: 0px; right: 0px;">
+                                                <i class="fa fa-battery-full"></i> 90%
+                                            </p>
                                         <!--/.col-->
                                     </div>
                                     <!--/.row-->
@@ -55,17 +58,14 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-5 col-lg-5">
+                        <div class="col-sm-12 col-lg-5">
                             <div class="row">
                                 <div class="col-sm-4 col-lg-4">
                                     <!-- First card -->
                                     <div class="card card-inverse card-primary">
-                                        <div class="card-block pb-0">
-                                            <h4 class="mb-0">9.823</h4>
-                                            <p>Action 1</p>
-                                        </div>
-                                        <div class="chart-wrapper px-1" style="height:70px;">
-                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        <div class="card-block pb-q">
+                                            <h4 class="mb-0">Action 1</h4>
+                                            <p>Description</p>
                                         </div>
                                     </div>
                                 </div>
@@ -73,12 +73,9 @@
                                 <div class="col-sm-4 col-lg-4">
                                     <!-- Second card -->
                                     <div class="card card-inverse card-primary">
-                                        <div class="card-block pb-0">
-                                            <h4 class="mb-0">9.823</h4>
-                                            <p>Action 2</p>
-                                        </div>
-                                        <div class="chart-wrapper px-1" style="height:70px;">
-                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        <div class="card-block pb-q">
+                                            <h4 class="mb-0">Action 2</h4>
+                                            <p>Description</p>
                                         </div>
                                     </div>
                                 </div>
@@ -87,12 +84,9 @@
 
                                     <!-- Fourth card -->
                                     <div class="card card-inverse card-primary">
-                                        <div class="card-block pb-0">
-                                            <h4 class="mb-0">9.823</h4>
-                                            <p>Action 4</p>
-                                        </div>
-                                        <div class="chart-wrapper px-1" style="height:70px;">
-                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        <div class="card-block pb-q">
+                                            <h4 class="mb-0">Action 3</h4>
+                                            <p>Description</p>
                                         </div>
                                     </div>
                                 </div>
@@ -104,12 +98,9 @@
                                 <div class="col-sm-4 col-lg-4">
                                     <!-- Third card -->
                                     <div class="card card-inverse card-primary">
-                                        <div class="card-block pb-0">
-                                            <h4 class="mb-0">9.823</h4>
-                                            <p>Action 3</p>
-                                        </div>
-                                        <div class="chart-wrapper px-1" style="height:70px;">
-                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        <div class="card-block pb-q">
+                                            <h4 class="mb-0">Action 4</h4>
+                                            <p>Description</p>
                                         </div>
                                     </div>
                                 </div>
@@ -117,12 +108,9 @@
 
                                     <!-- Fourth card -->
                                     <div class="card card-inverse card-primary">
-                                        <div class="card-block pb-0">
-                                            <h4 class="mb-0">9.823</h4>
-                                            <p>Action 4</p>
-                                        </div>
-                                        <div class="chart-wrapper px-1" style="height:70px;">
-                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        <div class="card-block pb-q">
+                                            <h4 class="mb-0">Action 5</h4>
+                                            <p>Description</p>
                                         </div>
                                     </div>
                                 </div>
@@ -131,12 +119,9 @@
 
                                     <!-- Fourth card -->
                                     <div class="card card-inverse card-primary">
-                                        <div class="card-block pb-0">
-                                            <h4 class="mb-0">9.823</h4>
-                                            <p>Action 4</p>
-                                        </div>
-                                        <div class="chart-wrapper px-1" style="height:70px;">
-                                            <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                        <div class="card-block pb-q">
+                                            <h4 class="mb-0">Action 6</h4>
+                                            <p>Description</p>
                                         </div>
                                     </div>
                                 </div>
@@ -149,12 +134,10 @@
                         <div class="col-sm-3 col-lg-3">
                             <!-- First card -->
                             <div class="card card-inverse card-secondary">
-                                <div class="card-block pb-0">
-                                    <h4 class="mb-0">9.823</h4>
-                                    <p>Action 1</p>
-                                </div>
-                                <div class="chart-wrapper px-1" style="height:70px;">
-                                    <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                <div class="card-block p-0 clearfix">
+                                    <i class="fa fa-thermometer-3 bg-primary p-2 font-2xl mr-1 float-left"></i>
+                                    <div class="h5 text-primary mb-0 pt-1">23 °C</div>
+                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Temperature</div>
                                 </div>
                             </div>
                         </div>
@@ -162,12 +145,10 @@
                         <div class="col-sm-3 col-lg-3">
                             <!-- Second card -->
                             <div class="card card-inverse card-secondary">
-                                <div class="card-block pb-0">
-                                    <h4 class="mb-0">9.823</h4>
-                                    <p>Action 2</p>
-                                </div>
-                                <div class="chart-wrapper px-1" style="height:70px;">
-                                    <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                <div class="card-block p-0 clearfix">
+                                    <i class="fa fa-tasks bg-primary p-2 font-2xl mr-1 float-left"></i>
+                                    <div class="h5 text-primary mb-0 pt-1">0.2 g / 0.8 g / 1.0 g</div>
+                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Accelerometer</div>
                                 </div>
                             </div>
                         </div>
@@ -176,12 +157,10 @@
 
                             <!-- Fourth card -->
                             <div class="card card-inverse card-secondary">
-                                <div class="card-block pb-0">
-                                    <h4 class="mb-0">9.823</h4>
-                                    <p>Action 4</p>
-                                </div>
-                                <div class="chart-wrapper px-1" style="height:70px;">
-                                    <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                <div class="card-block p-0 clearfix">
+                                    <i class="fa fa-signal bg-primary p-2 font-2xl mr-1 float-left"></i>
+                                    <div class="h5 text-primary mb-0 pt-1">75 %</div>
+                                    <div class="text-muted text-uppercase font-weight-bold font-xs">XBee Signal</div>
                                 </div>
                             </div>
                         </div>
@@ -191,12 +170,10 @@
 
                             <!-- Fourth card -->
                             <div class="card card-inverse card-secondary">
-                                <div class="card-block pb-0">
-                                    <h4 class="mb-0">9.823</h4>
-                                    <p>Action 4</p>
-                                </div>
-                                <div class="chart-wrapper px-1" style="height:70px;">
-                                    <canvas id="card-chart1" class="chart" height="70"></canvas>
+                                <div class="card-block p-0 clearfix">
+                                    <i class="fa fa-blind bg-primary p-2 font-2xl mr-1 float-left"></i>
+                                    <div class="h5 text-primary mb-0 pt-1">31 cm</div>
+                                    <div class="text-muted text-uppercase font-weight-bold font-xs">Obstacle distance</div>
                                 </div>
                             </div>
                         </div>
